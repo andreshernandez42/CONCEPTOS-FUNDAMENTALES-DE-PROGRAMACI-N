@@ -1,0 +1,19 @@
+Conclusiones
+
+1. Lo aprendido durante el desarrollo del proyecto
+
+Durante el desarrollo del proyecto se fortalecieron conocimientos fundamentales tanto técnicos como metodológicos. En el componente técnico, se afianzaron conceptos de lógica y estructuras de programación en Java, manejo de archivos, procesamiento de datos, modularización del código, validación de resultados y uso de compiladores para la construcción y ejecución del programa. De igual forma, el proyecto permitió comprender mejor la estructura de un desarrollo de software, desde la organización de clases y archivos hasta la construcción de soluciones a partir de requerimientos definidos.
+
+Adicionalmente, se adquirieron aprendizajes importantes en el uso de herramientas de apoyo al desarrollo como Git y GitHub para control de versiones, gestión colaborativa del código y manejo de repositorios, así como una mejor comprensión de buenas prácticas para estructurar proyectos, documentar soluciones y mantener trazabilidad sobre los avances realizados. Más allá de la programación misma, el proyecto permitió reforzar habilidades de análisis, resolución de problemas y pensamiento lógico aplicado.
+
+2. Posibles aplicaciones en la vida profesional de las destrezas y conocimientos adquiridos
+
+Los conocimientos adquiridos tienen aplicación directa tanto en la vida profesional como en situaciones cotidianas donde puedan identificarse oportunidades de mejora mediante tecnología. El proyecto permitió comprender cómo conceptos básicos de programación pueden utilizarse para resolver problemas reales, automatizar tareas repetitivas, procesar información y generar soluciones prácticas para necesidades operativas o personales.
+
+Desde el interés particular en el desarrollo de software, esta experiencia fortalece bases para seguir construyendo soluciones orientadas a resolver problemas cotidianos mediante automatización, organización de información y desarrollo de herramientas simples pero útiles. Asimismo, deja ver cómo incluso conceptos fundamentales pueden escalar hacia soluciones más robustas aplicables en ámbitos empresariales, tecnológicos o de optimización de procesos, reforzando una visión de la programación no solo como conocimiento técnico sino como medio para crear valor y solucionar problemas.
+
+3. Dificultades presentadas durante el desarrollo del proyecto
+
+Entre las principales dificultades presentadas estuvo la gestión del tiempo y la coordinación del trabajo en equipo, especialmente por tratarse de un proyecto colaborativo donde fue necesario alinear tareas, tiempos y aportes entre los integrantes. También representó un reto que no todos los miembros contaran con el mismo nivel de conocimientos en programación, lo cual en algunos momentos impactó la agilidad del trabajo y exigió mayores espacios de apoyo, revisión y acompañamiento para avanzar de manera conjunta.
+
+No obstante, estas dificultades pudieron superarse mediante organización, comunicación y distribución de actividades, convirtiéndose en parte del aprendizaje mismo del proyecto. Más allá del componente técnico, esta experiencia permitió reconocer la importancia del trabajo colaborativo, la adaptación ante retos y la disciplina para llevar una solución desde su planteamiento hasta su implementación, integrando tanto aprendizajes técnicos como habilidades de trabajo en equipo.
