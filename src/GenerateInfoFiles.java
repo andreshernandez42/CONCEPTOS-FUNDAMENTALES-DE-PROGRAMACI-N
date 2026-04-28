@@ -3,7 +3,6 @@ import java.util.Random;
 
 /**
  * Clase encargada de generar la data de prueba pseudoaleatoria.
- * Requisito: Primera entrega del proyecto.
  */
 public class GenerateInfoFiles {
 
@@ -15,12 +14,12 @@ public class GenerateInfoFiles {
     public static void main(String[] args) {
         try {
             System.out.println("Iniciando generación de archivos de prueba...");
-            
-            // 5b. Crear archivo de productos (ejemplo: 5 productos)
+
             createProductsFile(PRODUCTOS.length);
-            
-            // 5c. Crear archivo de información de vendedores (ejemplo: 3 vendedores)
             createSalesManInfoFile(3);
+
+            // 🔥 GENERA EL ARCHIVO OBLIGATORIO
+            createConclusionFile();
 
             System.out.println("✅ Finalización exitosa: Archivos creados en la carpeta del proyecto.");
         } catch (Exception e) {
@@ -28,7 +27,6 @@ public class GenerateInfoFiles {
         }
     }
 
-    // 5b. Crea archivo de información de productos
     public static void createProductsFile(int productsCount) throws Exception {
         try (PrintWriter writer = new PrintWriter("productos.csv", "UTF-8")) {
             for (int i = 0; i < productsCount; i++) {
@@ -38,7 +36,6 @@ public class GenerateInfoFiles {
         }
     }
 
-    // 5c. Crea archivo de información de vendedores
     public static void createSalesManInfoFile(int salesmanCount) throws Exception {
         Random rand = new Random();
         try (PrintWriter writer = new PrintWriter("vendedores.csv", "UTF-8")) {
@@ -47,26 +44,40 @@ public class GenerateInfoFiles {
                 String nombre = NOMBRES[rand.nextInt(NOMBRES.length)];
                 String apellido = APELLIDOS[rand.nextInt(APELLIDOS.length)];
                 String tipoDoc = TIPOS_DOC[rand.nextInt(TIPOS_DOC.length)];
-                
+
                 writer.println(tipoDoc + ";" + id + ";" + nombre + ";" + apellido);
-                
-                // 5a. Crear el archivo de ventas individual para este vendedor
                 createSalesMenFile(rand.nextInt(5) + 2, nombre, id);
             }
         }
     }
 
-    // 5a. Crea un archivo de ventas pseudoaleatorio para un vendedor específico
     public static void createSalesMenFile(int randomSalesCount, String name, long id) throws Exception {
         Random rand = new Random();
         String fileName = "vendedor_" + id + ".csv";
         try (PrintWriter writer = new PrintWriter(fileName, "UTF-8")) {
-            // Formato: TipoDoc;NumDoc en la primera línea
             writer.println(TIPOS_DOC[rand.nextInt(TIPOS_DOC.length)] + ";" + id);
             for (int i = 0; i < randomSalesCount; i++) {
-                // Formato: IDProducto;Cantidad;
                 writer.println((rand.nextInt(PRODUCTOS.length) + 1) + ";" + (rand.nextInt(10) + 1) + ";");
             }
+        }
+    }
+
+    public static void createConclusionFile() throws Exception {
+        try (PrintWriter writer = new PrintWriter("conclusion.txt", "UTF-8")) {
+
+            writer.println("CONCLUSIÓN DEL PROYECTO");
+            writer.println();
+
+            writer.println("1. Lo aprendido:");
+            writer.println("Durante el desarrollo del proyecto se adquirieron conocimientos fundamentales sobre el manejo de archivos en Java, incluyendo la lectura y escritura de archivos planos (.csv/.txt). Además, se fortalecieron habilidades en el uso de estructuras de datos como mapas (HashMap) para organizar y procesar información. También se comprendió cómo estructurar un programa en diferentes clases con responsabilidades específicas, separando la generación de datos del procesamiento de los mismos.");
+            writer.println();
+
+            writer.println("2. Aplicación en la vida profesional:");
+            writer.println("Los conocimientos adquiridos pueden aplicarse en el desarrollo de sistemas empresariales, especialmente en áreas como análisis de datos, sistemas de ventas, inventarios y generación de reportes. Este tipo de lógica es útil para automatizar procesos, organizar información y apoyar la toma de decisiones en una empresa. Además, el manejo de archivos y procesamiento de datos es una habilidad clave en el desarrollo de software y en proyectos de ingeniería de sistemas.");
+            writer.println();
+
+            writer.println("3. Dificultades:");
+            writer.println("Durante el desarrollo del proyecto se presentaron dificultades relacionadas con el manejo de múltiples archivos y la correcta lectura de los datos desde estos. También hubo retos al asegurar la coherencia entre los datos generados y los procesados, así como en el cumplimiento exacto de los requisitos del enunciado. Finalmente, se presentaron algunos errores en la ejecución y organización del código, los cuales fueron solucionados mediante pruebas y ajustes progresivos.");
         }
     }
 }
