@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             System.out.println("Procesando reportes...");
-            
+
             // Cargar Catálogos
             Map<String, Double> preciosProds = new HashMap<>();
             Map<String, String> nombresProds = new HashMap<>();
@@ -72,7 +72,7 @@ public class Main {
 
     private static void generarReporteVendedores(Map<String, String> nombres, Map<String, Double> totales) throws IOException {
         List<Map.Entry<String, Double>> lista = new ArrayList<>(totales.entrySet());
-        lista.sort((a, b) -> b.getValue().compareTo(a.getValue())); // Descendente
+        lista.sort((a, b) -> b.getValue().compareTo(a.getValue()));
 
         try (PrintWriter pw = new PrintWriter("reporte_vendedores.csv")) {
             for (Map.Entry<String, Double> e : lista) {
@@ -83,8 +83,8 @@ public class Main {
 
     private static void generarReporteProductos(Map<String, String> nombres, Map<String, Double> precios, Map<String, Integer> ventas) throws IOException {
         List<String> idsOrdenados = ventas.keySet().stream()
-            .sorted((a, b) -> ventas.get(b).compareTo(ventas.get(a)))
-            .collect(Collectors.toList());
+                .sorted((a, b) -> ventas.get(b).compareTo(ventas.get(a)))
+                .collect(Collectors.toList());
 
         try (PrintWriter pw = new PrintWriter("reporte_productos.csv")) {
             for (String id : idsOrdenados) {
